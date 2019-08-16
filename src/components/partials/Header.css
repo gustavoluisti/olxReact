@@ -3,8 +3,18 @@ header{
     height: 60px;
     border-bottom: 1px solid #ccc;
 }
+
+header a {
+    color: #000;
+    text-decoration: none;
+}
+
 .logo{
     flex: 1;
+    display: flex;
+    align-items: center;
+    min-height: 60px;
+    padding-left: 10px;
 }
 .logo-1, .logo-2, .logo-3 {
     font-size: 27px;
@@ -32,9 +42,74 @@ nav li {
     padding: 0;
     list-style: none;
 }
+nav ul {
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
 nav li{
-    display:inline-block;
     margin-left: 20px;
     margin-right: 20px;
-    height: 40px;
+}
+
+.menu--opener{
+    display: none;
+    position:absolute ;
+    top:0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.menu--opener img {
+    width: 46px;
+    height: 46px;
+}
+
+.opened{
+    display: block;
+    
+}
+
+.link--button{
+    background-color: #ff8100;
+    padding: 10px 15px;
+    border-radius: 4px;
+    color: #FFF;
+    transition:all ease .2s;
+}
+
+.link--button:hover{
+    background-color: #e57706;
+}
+
+@media(max-width: 600px) {
+
+    .menu--opener{
+        display:flex;
+    }
+
+    header {
+        height: auto;
+    }
+
+    header .container {
+        flex-direction: column;
+        
+    }
+    nav {
+        display: none;
+    }
+
+    nav ul {
+        height: auto;
+        flex-direction: column;
+    }
+
+    nav li {
+        margin: 15px;
+    }
 }

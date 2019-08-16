@@ -1,31 +1,52 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, useState} from 'react';
+import { Link } from 'react-router-dom';
 import './Header.css';
 
+import menuButton from '../../assets/burger.png'
+
 const Header = (props) => {
+
+    const [menuOpened, setMenuOpened] = useState(false)
+
+    const menuToggle = () => {
+        setMenuOpened(!menuOpened)
+    };
 
     console.log(props.user)
 
     return (
         <header>
             <div className="container">
-                <div className="logo">
-                    <span className="logo-1">R</span>
-                    <span className="logo-2">E</span>
-                    <span className="logo-3">A</span>
+                <div className="menu--opener" onClick={menuToggle}>
+                    <img src={menuButton} />
                 </div>
-                <nav>
+
+                <div className="logo">
+                    <span className="logo-1">VENDA</span>
+                    <span className="logo-2">A</span>
+                    <span className="logo-3">E</span>
+                </div>
+                <nav className={menuOpened ? 'opened' : ''}>
                     <ul>
                         {props.user.logged &&
-                            <li>Minha conta</li>
+                            <li>
+                                <Link to="/minha-conta">Minha Conta</Link>
+                            </li>
                         }
                         {props.user.logged === false &&
                             <Fragment>
-                                <li>Login</li>
-                                <li>Registrar</li>
+                                <li>
+                                    <Link to="/login">Login</Link>
+                                </li>
+                                <li>
+                                    <Link to="/registrar">Registrar</Link>
+                                </li>
                             </Fragment>
                         }
 
-                        <li>Poste um anúncio</li>
+                        <li>
+                           <Link className="link--button" to="/poste-um-anuncio">Poste um anúncio</Link> 
+                        </li>
                     </ul>
                 </nav>
 
