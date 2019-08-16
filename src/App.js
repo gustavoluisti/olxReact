@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
-import OlxApi from './helpers/OlxApi';
 
 import Home from './pages/Home';
 import Sobre from './pages/Sobre';

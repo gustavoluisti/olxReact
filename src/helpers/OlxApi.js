@@ -1,7 +1,7 @@
 
-const OlxApi = {
+const OlxAPI = {
 
-    getProductList:(limit = 10) => {
+    getProducts:(limit = 10) => {
         return new Promise((resolve, reject) => {
 
             setTimeout(function() {
@@ -12,9 +12,9 @@ const OlxApi = {
                 ];
 
                 resolve(array);
-            }, 2000);
+            }, 3000);
         });
     }
 };
 
-export default OlxApi;
+export default OlxAPI;
