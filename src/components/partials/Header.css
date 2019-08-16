@@ -1,0 +1,40 @@
+header{
+    background-color: #FFF;
+    height: 60px;
+    border-bottom: 1px solid #ccc;
+}
+.logo{
+    flex: 1;
+}
+.logo-1, .logo-2, .logo-3 {
+    font-size: 27px;
+    font-weight: bold;
+}
+.logo-1 {
+    color: tomato;
+    
+}
+.logo-2 {
+    color: #00FF00;
+}
+.logo-3 {
+    color: #0000FF;
+}
+
+nav {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+nav ul,
+nav li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+nav li{
+    display:inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 40px;
+}

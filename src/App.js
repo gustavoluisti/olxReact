@@ -6,13 +6,13 @@ import './App.css';
 import Home from './pages/Home';
 import Sobre from './pages/Sobre';
 
+import Header from './components/partials/Header'
+
 function App(props) {
   return (
     <BrowserRouter>
       <div className="App">
-        <header className="App-header">
-          Nome: {props.name}
-        </header>
+        <Header user={props.user} />
 
         <Route exact path="/" component={Home} />
         <Route path="/sobre" component={Sobre} />
@@ -22,7 +22,7 @@ function App(props) {
 }
 const mapStateToProps = (state) => {
   return {
-    name: state.user.name
+    user: state.user
   }
 }
 

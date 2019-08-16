@@ -1,6 +1,7 @@
 const initialState = {
     name: 'Gustavo',
-    email: 'contato@spartadev.com.br'
+    email: 'contato@spartadev.com.br',
+    logged: false
 };
 
 const userReducer = (state = initialState, action) => {
